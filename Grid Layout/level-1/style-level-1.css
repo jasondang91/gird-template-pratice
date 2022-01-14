@@ -1,0 +1,27 @@
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.layout {
+    display: grid;
+    /* grid-template-columns: column-size | column-size | column-size */
+    grid-template-columns: 200px 200px 100px; /* Chia cột */
+    grid-template-columns: 50% 30% 20%;
+    /* track line */
+    /* Số cột 3: track line = số cột + 1 */
+    /* grid-column-gap: 30px; */
+    /* gap count: column count - 1  */
+    /* nếu như set gap giữa 3 column thì sẽ bị độn lên hơn 100% width 
+       nên trên browser sẽ có hiện thanh scroll ngang 
+       => cách giải quyết sẽ dùng hàm calc() */
+    grid-template-columns: calc(50% - 30px) calc(30% - 30px) 20%;
+    /* cách dùng calc() như vậy rất rắc rối và phức tạp, đôi khi sẽ kém hiệu quả
+       và cho kết quả không chính xác => cách giải quyết dùng đơn vị (fr) */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* khi này khi dùng gap column browser sẽ tự tính toán chia đều cột & gap
+       và sẽ không hiện thanh scroll ngang trên browser nữa */
+    grid-gap: 20px;
+    grid-template-rows: auto auto;   
+}
+
