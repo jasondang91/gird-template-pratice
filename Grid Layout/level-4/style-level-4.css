@@ -44,14 +44,14 @@ img {
 }
 .post-items {
     border-radius: 15px;
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 
-    0 2px 10px 0 rgb(0 0 0 / 12%);
     overflow: hidden;
     display: flex; /** Kết hợp với flexbox để phần height cân bằng nhau **/
     flex-direction: column; /** set flex-direction: column để hướng đi của box theo chiều dọc column **/
     transition: all 0.2s ease-in-out;
 }
 .post-items:hover {
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 
+    0 2px 10px 0 rgb(0 0 0 / 12%);
     box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
 }
 .post-items:first-child .post-image{
