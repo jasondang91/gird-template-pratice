@@ -3,10 +3,8 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway', sans-serif;
 }
+p { font-family: 'Raleway', sans-serif;}
 
-p {
-    font-family: 'Raleway', sans-serif;
-}
 a {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
@@ -34,6 +32,15 @@ img {
         "post1 post2 post3"
         "post1 post4 post5";
     padding: 30px;
+}
+@media screen and (max-width: 768px) {
+    .post-section {
+        display: unset;
+    }
+    .post-items {
+        margin: 10px;
+        padding: 20px
+    }
 }
 .post-image {
     width: 100%;
@@ -80,6 +87,7 @@ img {
     font-weight: 300;
     font-size: 14px;
     line-height: 1.5;
+    text-align: justify;
 }
 .post-heading {
     color: #794a99;
